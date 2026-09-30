@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>EduGenie - AI Learning Assistant</title>
+    <link rel="stylesheet"
+          href="/static/css/style.css">
+    <script src="/static/js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🎓 EduGenie</h1>
+        <p>Google Gemini Powered Learning Assistant</p>
+    </header>
+
+    <main>
+        <h2>Welcome to EduGenie!</h2>
+        <p>Choose a learning tool below.</p>
+
+        <nav>
+            <button onclick="showTool('qa')">
+                Ask a Question
+            </button>
+            <button onclick="showTool('explain')">
+                Explain a Concept
+            </button>
+            <button onclick="showTool('quiz')">
+                Generate Quiz
+            </button>
+            <button onclick="showTool('summarize')">
+                Summarize Notes
+            </button>
+            <button onclick="showTool('learn')">
+                Learning Path
+            </button>
+        </nav>
+
+        <section>
+            <h2 id="tool-title">Ask a Question</h2>
+
+            <textarea id="user-input"
+                placeholder="Enter your question or topic..."
+                rows="6"></textarea>
+
+            <div id="level-container" hidden>
+                <label for="level">Your level:</label>
+                <select id="level">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select>
+            </div>
+
+            <button id="submit-btn" onclick="submitTool()">
+                Generate
+            </button>
+
+            <div id="result" aria-live="polite"></div>
+        </section>
+    </main>
+</body>
+</html>
